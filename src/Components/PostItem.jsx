@@ -1,11 +1,15 @@
 import React from 'react';
 import '../styles/Post.css'
 
-const PostItem = () => {
+const PostItem = (props) => {
+
     return (
         <div className="post">
             <div className="post_content">
-                <strong>JavaScript - язык программирования</strong>
+                <strong>{props.post.id}. {props.post.title}</strong>
+            </div>
+            <div className="post_body">
+                {props.post.body}
             </div>
             <div className="post_btn">
                 <button className="btn">Удалить</button>
